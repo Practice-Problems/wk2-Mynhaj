@@ -5,9 +5,7 @@ def encrypt(s):
     rows = columns = int(len(p)**0.5)
     if (len(p)**0.5 - rows)>0: rows += 1;
     if (len(p)**0.5 - columns)>0.5: columns += 1;
-    print (columns, rows)
     k = [p[i:rows+i] for i in range(0,len(p),rows)]
-    for i in k: print (i)
     p = [[k[i][j] for i in range(columns) if j < len(k[i])] for j in range(rows)]
     for i in p: print(''.join(i),end=' ')
 
